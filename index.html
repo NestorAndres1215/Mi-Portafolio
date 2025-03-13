@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Desarrollador Full-Stack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="text-gray-300">
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-[#0a192f] shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo o título -->
+            <h1 class="text-2xl font-bold gradient-text">Mi Portafolio</h1>
+
+            <!-- Menú para pantallas grandes -->
+            <div class="hidden md:flex space-x-4">
+                <a href="#inicio" class="hover:text-[#64ffda] transition">Inicio</a>
+                <a href="#sobre-mi" class="hover:text-[#64ffda] transition">Sobre Mí</a>
+                <a href="#conocimientos" class="hover:text-[#64ffda] transition">Conocimientos</a>
+                <a href="#lenguajes" class="hover:text-[#64ffda] transition">Lenguajes</a>
+                <a href="#proyectos" class="hover:text-[#64ffda] transition">Proyectos</a>
+                <a href="#contacto" class="hover:text-[#64ffda] transition">Contacto</a>
+            </div>
+
+            <!-- Botón de menú para móviles -->
+            <button id="menuButton" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menú desplegable para móviles -->
+        <div id="mobileMenu" class="md:hidden bg-[#0a192f] hidden">
+            <div class="flex flex-col space-y-2 px-4 py-2">
+                <a href="#inicio" class="hover:text-[#64ffda] transition">Inicio</a>
+                <a href="#sobre-mi" class="hover:text-[#64ffda] transition">Sobre Mí</a>
+                <a href="#conocimientos" class="hover:text-[#64ffda] transition">Conocimientos</a>
+                <a href="#lenguajes" class="hover:text-[#64ffda] transition">Lenguajes</a>
+                <a href="#proyectos" class="hover:text-[#64ffda] transition">Proyectos</a>
+                <a href="#contacto" class="hover:text-[#64ffda] transition">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <header id="inicio" class="min-h-screen flex items-center justify-center text-center pt-16 bg-cover bg-center relative" style="background-image: url('img/programacion.png');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="animate__animated animate__fadeIn">
+                <h1 class="text-5xl font-bold mb-4 gradient-text">Desarrollador Full-Stack</h1>
+                <p class="text-xl mb-8 text-white">Creando soluciones web innovadoras y escalables</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#proyectos"
+                        class="bg-[#64ffda] text-[#0a192f] px-6 py-3 rounded-full hover:bg-[#00a8cc] transition">Ver
+                        Proyectos</a>
+                    <a href="#contacto"
+                        class="border-2 border-[#64ffda] text-[#64ffda] px-6 py-3 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition">Contáctame</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="py-20 bg-[#112240]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Sobre Mí</h2>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center">
+                <!-- Imagen por defecto -->
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://www.imagar.com/wp-content/uploads/2022/01/analista-programador-imagar-600x400.jpg"
+                        alt="Néstor - Desarrollador Full-Stack" class="rounded-lg shadow-lg">
+                </div>
+                <!-- Texto personalizado -->
+                <div class="w-full md:w-1/2 md:ml-8">
+                    <h3 class="text-2xl font-semibold mb-4">Hola, soy Néstor, Desarrollador Full-Stack</h3>
+                    <p class="mb-4">Apasionado por crear aplicaciones web modernas, eficientes y escalables. Me
+                        especializo en el desarrollo de soluciones completas, desde el frontend hasta el backend,
+                        asegurando un alto rendimiento y una excelente experiencia de usuario.</p>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="card p-3 rounded text-center">Frontend</div>
+                        <div class="card p-3 rounded text-center">Backend</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección de Lenguajes de Programación -->
+    <section id="conocimientos" class="py-20 bg-[#0a192f]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Mis Conocimientos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Java -->
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Java</h3>
+                    <p class="text-gray-400">Desarrollo backend y aplicaciones empresariales.</p>
+                </div>
+                <!-- Spring Boot -->
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                        alt="Spring Boot" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Spring Boot</h3>
+                    <p class="text-gray-400">Framework para aplicaciones Java.</p>
+                </div>
+
+                <!-- Node.js -->
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                        alt="Node.js" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Node.js</h3>
+                    <p class="text-gray-400">Entorno de ejecución para JavaScript en el backend.</p>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">JavaScript</h3>
+                    <p class="text-gray-400">Lenguaje para desarrollo frontend y backend.</p>
+                </div>
+                <!-- Express -->
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                        alt="Express" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Express</h3>
+                    <p class="text-gray-400">Framework para aplicaciones web en Node.js.</p>
+                </div>
+
+                <!-- MySQL -->
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">MySQL</h3>
+                    <p class="text-gray-400">Sistema de gestión de bases de datos relacionales.</p>
+                </div>
+
+                <!-- PostgreSQL -->
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" alt="PostgreSQL"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">PostgreSQL</h3>
+                    <p class="text-gray-400">Base de datos relacional avanzada.</p>
+                </div>
+                <!-- Angular -->
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg"
+                        alt="Angular" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Angular</h3>
+                    <p class="text-gray-400">Framework para aplicaciones web frontend.</p>
+                </div>
+
+                <!-- React -->
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn-icons-png.flaticon.com/512/753/753244.png" alt="React"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">React</h3>
+                    <p class="text-gray-400">Biblioteca para construir interfaces de usuario.</p>
+                </div>
+                <!-- MongoDB -->
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                        alt="MongoDB" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">MongoDB</h3>
+                    <p class="text-gray-400">Base de datos NoSQL orientada a documentos.</p>
+                </div>
+                <!-- C# -->
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" alt="C#"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">C#</h3>
+                    <p class="text-gray-400">Lenguaje para aplicaciones de escritorio y juegos.</p>
+                </div>
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
+                        alt=".NET" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">.NET</h3>
+                    <p class="text-gray-400">Plataforma de desarrollo de aplicaciones.</p>
+                </div>
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                        alt="Bootstrap" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Bootstrap</h3>
+                    <p class="text-gray-400">Framework de diseño responsivo para la web.</p>
+                </div>
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg"
+                        alt="Git" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Git</h3>
+                    <p class="text-gray-400">Control de versiones y colaboración en proyectos.</p>
+                </div>
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                        alt="Postman" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Postman</h3>
+                    <p class="text-gray-400">Pruebas y documentación de APIs.</p>
+                </div>
+                <div class="card p-6 rounded-lg text-center animate-fade-in-up">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+                        alt="SQL Server" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">SQL Server</h3>
+                    <p class="text-gray-400">Sistema de gestión de bases de datos relacionales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección de Herramientas -->
+    <section id="herramientas" class="py-20 bg-[#112240]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Mis Proyectos Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Proyecto 1 -->
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto -->
+
+                    <h3 class="text-xl font-semibold mb-2">Proyecto_Traillers_Películas</h3>
+                    <p class="text-gray-400">
+                        Sistema para la gestión de trailers de películas desarrollado con Java, Spring Boot, Spring JPA,
+                        Thymeleaf y MySQL.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                        <a href="https://github.com/NestorAndres1215/Proyecto-de-Peliculas-en-Java"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto -->
+
+                    <h3 class="text-xl font-semibold mb-2">Proyecto Spring Boot con JWT y Spring Security</h3>
+                    <p class="text-gray-400">
+                        Autenticación y autorización con JWT en Spring Boot, usando Spring Security y JPA con MySQL.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                        <a href="https://github.com/NestorAndres1215/Spring-Boot-con-Jwt-y-Spring-Security"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto -->
+
+                    <h3 class="text-xl font-semibold mb-2">Sistema de Gestión de Moda en Spring Boot y MySQL</h3>
+                    <p class="text-gray-400">
+                        Sistema desarrollado con Spring Boot y MySQL para la gestión de productos y ventas en el sector
+                        moda.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                        <a href="https://github.com/NestorAndres1215/-Sistema-de-Gestion-de-Moda-en-Spring-Boot-y-MySQL"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto -->
+
+                    <h3 class="text-xl font-semibold mb-2">Control de Ingreso y Gasto</h3>
+                    <p class="text-gray-400">
+                        Sistema web para gestionar ingresos y gastos, desarrollado con ASP.NET Core y Bootstrap.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                        <a href="https://github.com/NestorAndres1215/Control-de-Ingreso-y-Gasto"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto -->
+
+                    <h3 class="text-xl font-semibold mb-2">Node.js MySQL CRUD con EJS</h3>
+                    <p class="text-gray-400">
+                        Aplicación CRUD con Node.js, MySQL y EJS para la gestión de datos con una interfaz dinámica.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                        <a href="https://github.com/NestorAndres1215/Nodejs-MySQL-CRUD"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto -->
+
+                    <h3 class="text-xl font-semibold mb-2">Sistema de Inventario con Spring Boot y JWT</h3>
+                    <p class="text-gray-400">
+                        Aplicación para la gestión de inventarios con autenticación JWT, seguridad con Spring Security y
+                        base de datos MySQL.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                        <a href="https://github.com/NestorAndres1215/BACK-INVENTARIO"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto -->
+
+                    <h3 class="text-xl font-semibold mb-2">Importación de Archivos con Spring Boot</h3>
+                    <p class="text-gray-400">
+                        Aplicación para la carga, almacenamiento y descarga de archivos (PDF, Word, Excel, imágenes) con
+                        Spring Boot y MySQL.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                        <a href="https://github.com/NestorAndres1215/Importacion-de-archivos-en-Java"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto -->
+
+                    <h3 class="text-xl font-semibold mb-2">Sistema MVC con ASP.NET Core y React</h3>
+                    <p class="text-gray-400">
+                        Aplicación con arquitectura MVC utilizando ASP.NET Core Web API para el backend y React en el
+                        frontend.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                        <a href="https://github.com/NestorAndres1215/-Sistema-MVC-con-ASP.NET-Core-Web-API-y-React"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto -->
+
+                    <h3 class="text-xl font-semibold mb-2">Sistema de Usuario en JavaFX</h3>
+                    <p class="text-gray-400">
+                        Aplicación de gestión de usuarios desarrollada con JavaFX y MySQL, utilizando JDBC para la
+                        persistencia de datos.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                        <a href="https://github.com/NestorAndres1215/Sistema-Usuario-JavaFX"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Sección de Proyectos -->
+    <section id="proyectos" class="py-20 bg-[#0a192f]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Mis Proyectos Demos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Proyecto 1 -->
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto 1 -->
+                    <img src="img/img-f1.png" alt="E-commerce con React"
+                        class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Pokedex</h3>
+                    <p class="text-gray-400">Aplicación que consume la API de Pokédex.</p>
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="https://github.com/NestorAndres1215/Pokedex-Html-Css"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                        <a href="https://nestorandres1215.github.io/Pokedex-Html-Css/"
+                            class="border-2 border-[#64ffda] text-[#64ffda] px-4 py-2 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Demo
+                        </a>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto 2 -->
+                    <img src="img/img-f2.PNG" alt="API de Países del Mundo"
+                        class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Paises del Mundo</h3>
+                    <p class="text-gray-400">Aplicación que consume una Json para mostrar información de los países del
+                        mundo.</p>
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="https://github.com/NestorAndres1215/Api-Paises"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                        <a href="https://nestorandres1215.github.io/Api-Paises/"
+                            class="border-2 border-[#64ffda] text-[#64ffda] px-4 py-2 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto 3 -->
+                    <img src="img/img-f3.PNG" alt="Carrito de Compras de Cursos"
+                        class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Carrito de Compras de Cursos</h3>
+                    <p class="text-gray-400">Aplicación que permite agregar cursos a un carrito de compras.</p>
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="https://github.com/NestorAndres1215/CarritoCompras"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                        <a href="https://nestorandres1215.github.io/CarritoCompras/"
+                            class="border-2 border-[#64ffda] text-[#64ffda] px-4 py-2 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto 3 -->
+                    <img src="img/img-f4.PNG" alt="Tienda de Relojes" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Tienda de Relojes</h3>
+                    <p class="text-gray-400">Aplicación que permite explorar y agregar relojes a un carrito de compras.
+                    </p>
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="https://github.com/NestorAndres1215/Pagina-Relojes-Carrito_Compras"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                        <a href="https://nestorandres1215.github.io/Pagina-Relojes-Carrito_Compras/"
+                            class="border-2 border-[#64ffda] text-[#64ffda] px-4 py-2 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto -->
+                    <img src="img/img-f5.PNG" alt="Página Contable - Registro de Compras y Ventas"
+                        class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Página Contable - Registro de Compras y Ventas</h3>
+                    <p class="text-gray-400">Aplicación diseñada para gestionar y registrar compras y ventas de manera
+                        eficiente.</p>
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="https://github.com/NestorAndres1215/PAGINA-CONTABLE"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                        <a href="https://nestorandres1215.github.io/PAGINA-CONTABLE/"
+                            class="border-2 border-[#64ffda] text-[#64ffda] px-4 py-2 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg animate-fade-in-up">
+                    <!-- Imagen del Proyecto -->
+                    <img src="img/img-f6.PNG" alt="Buscador de Películas Japonesas - Studio Ghibli"
+                        class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Buscador de Películas Japonesas - Studio Ghibli</h3>
+                    <p class="text-gray-400">Aplicación que permite explorar y buscar información sobre las películas de
+                        Studio Ghibli.</p>
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="https://github.com/NestorAndres1215/Buscador-Ghibli"
+                            class="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded-full hover:bg-[#00a8cc] transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                        <a href="https://nestorandres1215.github.io/Buscador-Ghibli/"
+                            class="border-2 border-[#64ffda] text-[#64ffda] px-4 py-2 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Demo
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+
+    <section id="contacto" class="py-20 bg-[#112240]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Contáctame</h2>
+            <form id="contactForm" class="max-w-lg mx-auto" action="https://formsubmit.co/atiroandres@gmail.com"
+                method="POST">
+                <div class="mb-4">
+                    <input type="text" name="name" placeholder="Nombre" required
+                        class="w-full p-3 border rounded-lg bg-[#0a192f] text-white">
+                </div>
+                <div class="mb-4">
+                    <input type="email" name="email" placeholder="Correo Electrónico" required
+                        class="w-full p-3 border rounded-lg bg-[#0a192f] text-white">
+                </div>
+                <div class="mb-4">
+                    <textarea name="message" placeholder="Tu Mensaje" required
+                        class="w-full p-3 border rounded-lg bg-[#0a192f] text-white" rows="5"></textarea>
+                </div>
+                <input type="hidden" name="_captcha" value="false"> <!-- Desactiva captcha -->
+                <div class="text-center">
+                    <button type="submit"
+                        class="bg-[#64ffda] text-[#0a192f] px-8 py-3 rounded-full hover:bg-[#00a8cc] transition">
+                        Enviar Mensaje
+                    </button>
+                </div>
+            </form>
+            <p id="responseMessage" class="text-center text-white mt-4"></p>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#0a192f] py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-gray-400">&copy; 2024 Mi Portafolio de Desarrollador. Todos los derechos reservados.</p>
+            <div class="mt-4 space-x-4 flex justify-center items-center">
+                <a href="https://www.linkedin.com/in/nestorat/"
+                    class="flex items-center space-x-2 hover:text-[#64ffda]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.79-1.75 1.75-1.75 1.75.79 1.75 1.75-.79 1.75-1.75 1.75zm13.5 11.28h-3v-5.5c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.6h-3v-10h2.88v1.37h.04c.4-.75 1.38-1.54 2.85-1.54 3.05 0 3.61 2.01 3.61 4.63v5.54z" />
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/NestorAndres1215" class="flex items-center space-x-2 hover:text-[#64ffda]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 .5c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.21 11.4.6.11.82-.26.82-.58v-2.14c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.35-1.75-1.35-1.75-1.1-.76.08-.75.08-.75 1.21.09 1.85 1.24 1.85 1.24 1.08 1.85 2.84 1.31 3.53 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.92 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.16 0 0 1-.32 3.28 1.23.95-.26 1.98-.39 3-.39s2.05.13 3 .39c2.28-1.55 3.28-1.23 3.28-1.23.66 1.64.24 2.86.12 3.16.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.61-5.48 5.92.43.37.81 1.1.81 2.21v3.28c0 .32.22.69.82.58 4.77-1.6 8.21-6.1 8.21-11.4 0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
